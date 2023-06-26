@@ -116,9 +116,9 @@ def plot(plot_types,
             plot_shape_bias_matrixplot(datasets=datasets,
                                        decision_maker_fun=plotting_definition,
                                        result_dir=result_dir)
-            plot_shape_bias_boxplot(datasets=datasets,
-                                    decision_maker_fun=plotting_definition,
-                                    result_dir=result_dir)
+            # plot_shape_bias_boxplot(datasets=datasets,
+            #                         decision_maker_fun=plotting_definition,
+            #                         result_dir=result_dir)
 
         elif plot_type == "error-consistency":
             plot_error_consistency(datasets=datasets,
@@ -520,7 +520,7 @@ def plot_shape_bias_matrixplot(datasets,
         for cl in classes:
             df_class_selection = df_selection.query("category == '{}'".format(cl))
             class_avgs.append(1 - analysis.analysis(df=df_class_selection)['shape-bias'])
-
+        print(class_avgs)
         ax.scatter(class_avgs, classes,
                    color=dmaker.color,
                    marker=dmaker.marker,
