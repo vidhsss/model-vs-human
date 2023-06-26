@@ -432,7 +432,7 @@ def plot_shape_bias_matrixplot(datasets,
     assert ds.name == "cue-conflict"
 
     log(plot_type="shape-bias-matrixplot", dataset_name=ds.name)
-    print(analysis)
+    print(analysis.analysis)
     df = ph.get_experimental_data(ds)
 
     fontsize = 25
