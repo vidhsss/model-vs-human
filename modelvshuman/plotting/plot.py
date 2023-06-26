@@ -500,11 +500,11 @@ def plot_shape_bias_matrixplot(datasets,
     left = XPOS + MARGINX
     right = XPOS + WIDTH - MARGINX
 
-    for i in range(num_classes):
-        bottom = i + MARGINY + YPOS
-        top = (i + 1) - MARGINY + YPOS
-        iconpath = pjoin(consts.ICONS_DIR, "{}.png".format(classes[i]))
-        plt.imshow(plt.imread(iconpath), extent=[left, right, bottom, top], aspect='auto', clip_on=False)
+    # for i in range(num_classes):
+    #     bottom = i + MARGINY + YPOS
+    #     top = (i + 1) - MARGINY + YPOS
+    #     iconpath = pjoin(consts.ICONS_DIR, "{}.png".format(classes[i]))
+    #     plt.imshow(plt.imread(iconpath), extent=[left, right, bottom, top], aspect='auto', clip_on=False)
 
     # plot horizontal intersection lines
     for i in range(num_classes - 1):
